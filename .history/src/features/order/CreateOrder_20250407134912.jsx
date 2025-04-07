@@ -87,13 +87,7 @@ function CreateOrder() {
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Phone number</label>
           <div className="grow">
-            <input
-              type="tel"
-              name="phone"
-              required
-              className="input w-full"
-              autoComplete="off"
-            />
+            <input type="tel" name="phone" required className="input w-full" />
             {formErrors?.phone && (
               <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
                 {formErrors?.phone}
@@ -114,7 +108,6 @@ function CreateOrder() {
                 className="input w-full"
                 disabled={isLoadingAddress}
                 defaultValue={address}
-                autoComplete="off"
               />
 
               {!position.latitude && !position.longitude && (
