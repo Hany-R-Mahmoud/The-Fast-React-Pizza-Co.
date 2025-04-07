@@ -1,0 +1,19 @@
+import { useFetcher } from 'react-router-dom';
+import Button from '../../ui/Button';
+
+function UpdataOrder({ order }) {
+  const fetcher = useFetcher();
+
+  return (
+    <fetcher.Form method="PATCH">
+      <Button type="primary">Make priority</Button>;
+    </fetcher.Form>
+  );
+}
+
+export default UpdataOrder;
+
+export async function action({ request, params }) {
+  console.log('hi');
+  return null;
+}
